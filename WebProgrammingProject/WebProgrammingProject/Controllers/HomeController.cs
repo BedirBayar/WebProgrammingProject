@@ -10,6 +10,11 @@ namespace WebProgrammingProject.Controllers
 {
     public class HomeController : Controller
     {
+        ComputerDbContext context;
+        public HomeController(ComputerDbContext c)
+        {
+            context = c;
+        }
         public IActionResult Index()
         {
             return View();

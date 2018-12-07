@@ -1,0 +1,11 @@
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\bin\Debug\netcoreapp2.0\WebProgrammingProject.deps.json
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\bin\Debug\netcoreapp2.0\WebProgrammingProject.runtimeconfig.json
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\bin\Debug\netcoreapp2.0\WebProgrammingProject.runtimeconfig.dev.json
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\bin\Debug\netcoreapp2.0\WebProgrammingProject.dll
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\bin\Debug\netcoreapp2.0\WebProgrammingProject.pdb
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\obj\Debug\netcoreapp2.0\WebProgrammingProject.csprojAssemblyReference.cache
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\obj\Debug\netcoreapp2.0\WebProgrammingProject.csproj.CoreCompileInputs.cache
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\obj\Debug\netcoreapp2.0\WebProgrammingProject.AssemblyInfoInputs.cache
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\obj\Debug\netcoreapp2.0\WebProgrammingProject.AssemblyInfo.cs
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\obj\Debug\netcoreapp2.0\WebProgrammingProject.dll
+C:\Users\bedir\Documents\GitHub\WebProgrammingProject\WebProgrammingProject\WebProgrammingProject\obj\Debug\netcoreapp2.0\WebProgrammingProject.pdb

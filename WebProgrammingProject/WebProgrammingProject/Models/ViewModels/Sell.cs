@@ -9,5 +9,8 @@ namespace WebProgrammingProject.Models.ViewModels
     {
         public Computer computer;
         public User user;
+        public CPU cpu;
+        public GPU gpu;
+        public Manufacturer man;
     }
 }
