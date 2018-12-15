@@ -1,0 +1,17 @@
+﻿@model Sell
+@{
+    ViewData["Title"] = "payComplete";
+}
+<h3>Ödeme Tamamlandı!</h3>
+<h4>Siparişiniz için teşekkür ederiz.</h4>
+<div class="satir">
+
+    <h4>@Html.ValueFor(m => m.man.Name) @Html.ValueFor(m => m.computer.ModelName)</h4>
+</div>
+<div class="satir">
+    <h3> Ödenen Tutar :   @Html.ValueFor(m => m.computer.Price) TL</h3>
+</div>
+<div class="satir">
+    @Html.Label("İşlemci :")
+    @Html.ValueFor(m => m.cpu.Name)
+</div>

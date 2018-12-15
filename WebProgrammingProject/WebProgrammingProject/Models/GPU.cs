@@ -11,5 +11,6 @@ namespace WebProgrammingProject.Models
         public String Name { get; set; }
         public int Power { get; set; }
         public int Bit { get; set; }
+        public int Size { get; set; }
     }
 }

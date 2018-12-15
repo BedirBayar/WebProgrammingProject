@@ -1,0 +1,58 @@
+﻿@model Sell
+@{
+    ViewData["Title"] = "Payment";
+}
+
+<h4 style=" color:red">Ürün Bilgileri</h4>
+<div class="satir">
+    @Html.Label("İlan Veren : ")
+    @Html.ValueFor(m => m.user.Name)
+</div>
+<div class="satir">
+
+    <h4>@Html.ValueFor(m => m.man.Name) @Html.ValueFor(m => m.computer.ModelName)</h4>
+</div>
+<div class="satir">
+    @Html.Label("İşlemci :")
+    @Html.ValueFor(m => m.cpu.Name)
+</div>
+<div class="satir">
+    @Html.Label("GPU :")
+    @Html.ValueFor(m => m.gpu.Name) 
+</div>
+<div class="satir">
+    @Html.Label("RAM :")
+    @Html.ValueFor(m => m.computer.RAMSize) GB
+</div>
+<div class="satir">
+    @Html.Label("Hard Disk (HDD + SSD):")
+    @Html.ValueFor(m => m.computer.HDDSize) + @Html.ValueFor(m=>m.computer.SSDSize) GB
+</div>
+
+<h4 style="color:red"> Ödeme Bilgileri</h4>
+<div class="satir">
+    <h3> Ödenecek Tutar :   @Html.ValueFor(m => m.computer.Price) TL</h3>
+</div>
+<div class="satir">
+    @Html.Label("Kart Sahibi :  ")
+    @Html.TextBox("CardHolder", null, new { style = "width:200px;" })
+</div>
+<div class="satir">
+    @Html.Label("Kart Numarası : ")
+    @Html.TextBox("CardNumber", null, new { style = "width:200px;" })
+</div>
+<div class="satir">
+    @Html.Label("Son Kullanma Tarihi : ")
+    @Html.TextBox("LastUse", null, new { style = "width:200px;" })
+</div>
+<div class="satir">
+    @Html.Label("CV/CV2 Kodu :")
+    @Html.TextBox("CVCode", null, new { style = "width:200px;" })
+</div>
+<div class="satir">
+    @Html.CheckBox("chk3D") 3D Secure kullanmak istiyorum.
+</div>
+<div class="satir">
+    <input type="submit" style="width:150px; margin-top:30px" value="Ödeme Yap" asp-action="payComplete" asp-route-id="@Model.computer.ID"/>
+</div>
+
