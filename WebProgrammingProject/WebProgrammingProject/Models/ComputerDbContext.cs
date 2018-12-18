@@ -17,6 +17,7 @@ namespace WebProgrammingProject.Models
         public DbSet<GPU> GPUs { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Manufacturer> Manufacturers { get; set; }
+        public DbSet<Sales> Sales { get; set; }
 
     }
 }

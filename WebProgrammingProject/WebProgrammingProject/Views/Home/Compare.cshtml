@@ -1,0 +1,116 @@
+﻿@model IEnumerable<Sell>
+@{
+    ViewData["Title"] = "Compare";
+}
+
+
+
+
+    <h2 style="text-align:center;">Karşılaştır</h2>
+
+    <table style="margin-left:auto; margin-right:auto;">
+        <tr>
+            <th style="width:200px; height:50px; padding:10px; background-color:#bbbbbb">Özellik</th>
+            @foreach (var item in Model)
+            {
+                <th style="width:200px; height:50px; padding:10px; background-color:#bbbbbb">@item.man.Name @item.computer.ModelName</th>
+            }
+
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Marka</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed">@item.man.Name </td>
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Model</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.computer.ModelName</td>
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">İşlemci Modeli</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.cpu.Name</td>
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">İşlemci Frekansı</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.cpu.Frequency GHz</td>
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">İşlemci Mimarisi</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.cpu.Architecture mm</td>
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">RAM Boyutu</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.computer.RAMSize GB</td>
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Grafik Kartı</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.gpu.Name</td>
+            }
+        </tr>
+
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Grafik Kartı Boyutu</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.gpu.Size GB</td>
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Grafik Kartı Bit Değeri</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.gpu.Bit bit</td>
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Ekran Boyutu</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.computer.ScreenSize inç</td>
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">HDD boyutu</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.computer.HDDSize GB</td>
+
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">SSD boyutu</td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @item.computer.SSDSize GB</td>
+
+            }
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc"></td>
+            @foreach (var item in Model)
+            {
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed">   <button style="width:150px" onclick="location.href='@Url.Action("deCompare", "Home",item.computer.ID)'" >Karşılaştırmadan Çıkar </button></td>
+
+            }
+        </tr>
+
+    </table>

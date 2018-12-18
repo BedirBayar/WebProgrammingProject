@@ -4,13 +4,14 @@
 }
 
 <h4 style=" color:red">Ürün Bilgileri</h4>
+
+<div class="satir">
+    <h4>@Html.ValueFor(m => m.man.Name) @Html.ValueFor(m => m.computer.ModelName)</h4>
+</div>
+
 <div class="satir">
     @Html.Label("İlan Veren : ")
     @Html.ValueFor(m => m.user.Name)
-</div>
-<div class="satir">
-
-    <h4>@Html.ValueFor(m => m.man.Name) @Html.ValueFor(m => m.computer.ModelName)</h4>
 </div>
 <div class="satir">
     @Html.Label("İşlemci :")
@@ -30,29 +31,35 @@
 </div>
 
 <h4 style="color:red"> Ödeme Bilgileri</h4>
-<div class="satir">
-    <h3> Ödenecek Tutar :   @Html.ValueFor(m => m.computer.Price) TL</h3>
-</div>
-<div class="satir">
-    @Html.Label("Kart Sahibi :  ")
-    @Html.TextBox("CardHolder", null, new { style = "width:200px;" })
-</div>
-<div class="satir">
-    @Html.Label("Kart Numarası : ")
-    @Html.TextBox("CardNumber", null, new { style = "width:200px;" })
-</div>
-<div class="satir">
-    @Html.Label("Son Kullanma Tarihi : ")
-    @Html.TextBox("LastUse", null, new { style = "width:200px;" })
-</div>
-<div class="satir">
-    @Html.Label("CV/CV2 Kodu :")
-    @Html.TextBox("CVCode", null, new { style = "width:200px;" })
-</div>
-<div class="satir">
-    @Html.CheckBox("chk3D") 3D Secure kullanmak istiyorum.
-</div>
-<div class="satir">
-    <input type="submit" style="width:150px; margin-top:30px" value="Ödeme Yap" asp-action="payComplete" asp-route-id="@Model.computer.ID"/>
-</div>
+
+   
+    <div class="satir">
+        <h3> Ödenecek Tutar :   @Html.ValueFor(m => m.computer.Price) TL</h3>
+    </div>
+    <table>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">  @Html.Label("Kart Sahibi : ")</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed">  @Html.TextBox("CardHolder", null, new { style = "width:200px;" }) </td>
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">  @Html.Label("Kart Numarası : ")</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed">   @Html.TextBox("CardNumber", null, new { style = "width:200px;" })</td>
+        </tr>
+
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">  @Html.Label("Son Kullanma Tarihi : ")</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed">    @Html.TextBox("LastUse", null, new { style = "width:200px;" })</td>
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">  @Html.Label("CV/CV2 Kodu :")</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed">    @Html.TextBox("CVCode", null, new { style = "width:200px;" })</td>
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; text-align:right; padding:5px; background-color:#cccccc">  @Html.CheckBox("chk3D")</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed">   3D Secure kullanmak istiyorum.</td>
+        </tr>
+    </table>
+            <button style="width:150px; margin-top:30px; font-size:large"  asp-action="payComplete" asp-route-id="@Model.computer.ID"> Ödeme Yap </button>
+
+    
 

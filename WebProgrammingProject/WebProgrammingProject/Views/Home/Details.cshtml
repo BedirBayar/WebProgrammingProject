@@ -4,95 +4,115 @@
     ViewData["Title"] = "Details";
 }
 <div style="align-self:center; align-content:center; text-align:center">
-<h2>İlan Detayları</h2>
+    <h2>İlan Detayları</h2>
+    <table style="margin-left:auto; margin-right:auto;">
 
-<div>
-    <h4>@Model.man.Name @Model.computer.ModelName</h4>
-    <hr />
-    <div class="satir">
-        @Html.Label("İlan Veren : ")
-        @Html.ValueFor(m => m.user.Name)
-    </div>
-    <div class="satir">
-        @Html.Label("Fiyat : ")
-        @Html.ValueFor(m => m.computer.Price) @Html.Label("TL")
-    </div>
-</div>
-<div class="satir">
-   --------------------------------------------
-</div>
-
-<div>
-
-    <div class="satir">
-        @Html.Label("Marka : ")
-        @Html.ValueFor(m => m.man.Name)
-    </div>
-    <div class="satir">
-        @Html.Label("Model : ")
-        @Html.ValueFor(m => m.computer.ModelName)
-    </div>
-    <div class="satir">
-        @Html.Label("Ekran Boyutu (inç) : ")
-        @Html.ValueFor(m => m.computer.ScreenSize)
-    </div>
-    <div class="satir">
-        @Html.Label("HDD Kapasitesi (GB) : ")
-        @Html.ValueFor(m => m.computer.HDDSize)
-    </div>
-    <div class="satir">
-        @Html.Label("SSD Kapasitesi (GB) : ")
-        @Html.ValueFor(m => m.computer.SSDSize)
-    </div>
-    <div class="satir">
-        @Html.Label("RAM Boyutu (GB) : ")
-        @Html.ValueFor(m => m.computer.RAMSize)
-    </div>
-    <div class="satir">
-        @Html.Label("İşlemci : ")
-        @Html.ValueFor(m => m.cpu.Name)
-    </div>
-    <div class="satir">
-        @Html.Label("CPU Mimarisi (nm) : ")
-        @Html.ValueFor(m => m.cpu.Architecture)
-    </div>
-    <div class="satir">
-        @Html.Label("İşlemci Frekansı (GHz) : ")
-        @Html.ValueFor(m => m.cpu.Frequency)
-    </div>
-    <div class="satir">
-        @Html.Label("Ekran Kartı : ")
-        @Html.ValueFor(m => m.gpu.Name)
-    </div>
-
-    @if (Model.gpu.Name != "Paylaşımlı")
-    {
-        <div class="satir">
-            @Html.Label("GPU Kapasitesi : ")
-            @Html.ValueFor(m => m.gpu.Size)
-        </div>
-
-        <div class="satir">
-            @Html.Label("GPU Bit Değeri : ")
-            @Html.ValueFor(m => m.gpu.Bit)
-        </div>
-        <div class="satir">
-            @Html.Label("GPU Gücü (Watt) : ")
-            @Html.ValueFor(m => m.gpu.Power)
-        </div>
-    }
-    <div class="satir">
-        @Html.Label("Satın Alınma Yılı : ")
-        @Html.ValueFor(m => m.computer.Year)
-    </div>
-    <div class="satir">
         
-        <a asp-controller="Home" asp-action="Payment" asp-route-id="@Model.computer.ID" > Satın Al</a>
-       
-        <input type="submit" style="width:150px" value="Sepete Ekle" />
-        <input type="button" style="width:150px" value="Karşılaştırmaya Ekle" />
-    </div>
+
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">İlan Veren</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.user.Name)</td>
+        </tr>
+
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Fiyat</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.computer.Price) TL</td>
+        </tr>
+
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc"></td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> </td>
+        </tr>
+
+
+
+
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Marka</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.man.Name)</td>
+        </tr>
+
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Model</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.computer.ModelName)</td>
+        </tr>
+
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Model</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.computer.ScreenSize) inç</td>
+
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Hard Disk Boyutu</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.computer.HDDSize) GB</td>
+
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">SSD Boyutu</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.computer.SSDSize) GB</td>
+
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">RAM Boyutu</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.computer.RAMSize) GB</td>
+
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">İşlemci</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.cpu.Name)</td>
+
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">İşlemci Mimarisi</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.cpu.Architecture) mm</td>
+
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">İşlemci Frekansı</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.cpu.Frequency) GHz</td>
+
+        </tr>
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Grafik Kartı</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.gpu.Name)</td>
+
+        </tr>
+
+        @if (Model.gpu.Name != "Paylaşımlı")
+        {
+            <tr>
+                <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Grafik Kartu Boyutu</td>
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.gpu.Size) GB</td>
+
+            </tr>
+
+            <tr>
+                <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Grafik Kartı Bit Değeri</td>
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.gpu.Bit) bit</td>
+
+            </tr>
+            <tr>
+                <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Grafik Kartı Gücü</td>
+                <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.gpu.Power) Watt</td>
+
+            </tr>
+        }
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc"> Satın Alma Yılı</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed"> @Html.ValueFor(m => m.computer.Year)</td>
+
+        </tr>
+
+        <tr>
+            <td style="width:200px; height:50px; color:palevioletred; font-weight:bold; padding:5px; background-color:#cccccc">Seçenekler</td>
+            <td style="width:200px; height:50px; padding:10px; border-bottom:1px dashed">
+                <button style="width:150px" onclick="location.href='@Url.Action("Payment", "Home",new { id=Model.computer.ID })'"> Satın Al</button>
+                <button style="width:150px"  onclick="location.href='@Url.Action("addToCart", "Home",new { id=Model.computer.ID })'" > Sepete Ekle</button>
+                <button style="width:150px" onclick="location.href='@Url.Action("addToCompare", "Home",new { id=Model.computer.ID })'"> Karşılaştırmaya Ekle</button>
+            </td>
+        </tr>
+    </table>
     @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ })*@
     <br /> <a asp-action="Index"><< İlanlara Geri Dön</a>
-</div>
-</div>
+    </div>
+

@@ -1,9 +1,15 @@
-﻿@model Computer
+﻿@model IEnumerable<Computer>
 @{
     ViewData["Title"] = "Home Page";
 }
+<div class="row">
+    @foreach (var item in Model)
+    {
+        @Html.Partial("/Views/_ComputerSummary.cshtml", item)
+    }
+</div>
+<button style="width:150px" onclick="location.href='@Url.Action("Compare", "Home")'" >Seçilenleri Karşılaştır</button>
 
-<a asp-action="Details" asp-route-id="1" class="btn btn-sm btn-outline-secondary">View</a>
 
 @*<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
         <ol class="carousel-indicators">

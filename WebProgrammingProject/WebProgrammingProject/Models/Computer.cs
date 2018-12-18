@@ -20,6 +20,7 @@ namespace WebProgrammingProject.Models
         public int UserID { get; set; }
         public double Price { get; set; }
         public Boolean IsSold { get; set; }
-        public String Picture { get; set; }
+        public String ImageUrl { get; set; }
+        public String ImageThumbnailUrl { get; set; }
     }
 }
